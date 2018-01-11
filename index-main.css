@@ -1,0 +1,112 @@
+body{
+	width:100%;
+	max-width:1280px;
+	margin:auto;
+}
+
+#main{
+	padding:10px 10px;
+	margin:auto;
+	font-family:"consolas",'sans-serif';
+}
+
+.optgroup-country-even option{
+	background-color:#eee;
+}
+.optgroup-country-odd option{
+	background-color:#fef;
+}
+
+.optgroup-state option{
+	background:#ccc;
+}
+
+.multiple{
+	padding:2px;
+	margin:2px 2px;
+}
+
+ul>li.group:nth-of-type(odd){
+	background:blue;
+}
+ul>li.group:nth-of-type(even){
+	background:green;
+}
+
+
+#list{
+	padding:1rem 1em;
+	margin:auto;
+	font-family:'sans-serif';
+	display:flex;
+	flex-wrap:wrap;
+}
+
+#list > div{
+	margin:0.5rem 0.5rem;
+	width:20%;
+	min-width:200px;
+	box-shadow:0px 0px 1px 1px rgba(0,0,0,0.125);
+	padding:1rem 1rem;
+	padding-bottom:0.25rem;
+	border-radius:3px;
+}
+
+#list >div:nth-of-type(odd){
+	background-color:rgba(250,250,250,0.125);
+}
+#list >div:nth-of-type(even){
+	background-color:rgba(250,250,250,0.25);
+}
+
+.listEntry{
+	display:flex;
+	flex-direction:column;
+}
+
+.entry-name{
+	font-family:"Fira Sans";
+	font-size:1.25rem;
+	padding-bottom:0.25rem;
+	border-bottom:1px solid rgba(0,0,0,0.5);
+}
+
+.entry-link{
+	padding:0.25rem 0rem;
+	text-align:center;
+	font-size:0.5rem;
+	align-self:center;
+	font-family:"consolas";
+}
+
+.location-container{
+	margin:0.25rem auto;
+	font-size:0.75rem;
+	display: flex;
+    flex-wrap: wrap;
+	border:1px solid rgba(0,0,0,0.25);
+	border-radius:3px;
+	padding: 0.25rem 0.25rem;
+}
+
+.location-entry{
+	margin:0.25rem 0.25rem;
+	border:1px solid rgba(0,0,0,0.25);
+	box-shadow:0px 0px 1px 0px rgba(0,0,0,0.125);
+	border-radius:3px;
+	padding:0.125rem;
+	font-family:"Open Sans";
+}
+
+.location-entry span{
+	margin: 0.25rem 0rem;
+    padding: 0rem 0.125rem;
+}
+
+.location-name{
+	padding-right:0.25rem !important;
+	border-right:1px solid black;
+}
+.location-country{
+	padding-left:0.25rem !important;
+}
