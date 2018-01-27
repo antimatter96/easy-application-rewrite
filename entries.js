@@ -439,7 +439,7 @@ var entries = { data :
 		{"loc":"Astoria, NY","country":"US"},
 		{"loc":"Berlin", "country":"Germany"}, 
 		{"loc":"El Segundo, CA","country":"US"},
-		{"loc":"Huntsville, AL ","country":"US"},
+		{"loc":"Huntsville, AL","country":"US"},
 		{"loc":"Irvine, CA","country":"US"},
 		{"loc":"London","country":"UK"}, 
 		{"loc":"Paris","country": "France"},
@@ -451,7 +451,7 @@ var entries = { data :
 	"locations":[
 		{"loc":"London","country" :"UK"},
 		{"loc":"New York, NY","country":"US"},
-		{"loc":"Philadelphia, PA ","country":"US"},
+		{"loc":"Philadelphia, PA","country":"US"},
 		{"loc":"Seattle, WA","country":"US"}
 	]
 },{
@@ -1160,7 +1160,7 @@ var entries = { data :
 	"name":"Nest",
 	"url":"http://nest.com/careers/life-at-nest/" ,
 	"locations":[
-		{"loc":"Kirkland, WA ","country":"US"},
+		{"loc":"Kirkland, WA","country":"US"},
 		{"loc":"Palo Alto, CA","country":"US"}
 	]
 },{
@@ -1206,7 +1206,7 @@ var entries = { data :
 },{
 	"name":"Onefootball",
 	"url":"https://www.onefootball.com/company/careers.html", 
-	"locations":[{"loc":"Berlin, Germany","country":"US"}]
+	"locations":[{"loc":"Berlin","country":"Germany"}]
 },{
 	"name":"OneLogin",
 	"url":"https://www.onelogin.com/jobs" ,
@@ -1284,7 +1284,7 @@ var entries = { data :
 	"url":"http://prezi.com/jobs/",
 	"locations":[
 		{"loc":"Budapest","country" :"Hungary"}, 
-		{"loc":"San Francisco, CA ","country":"US"}
+		{"loc":"San Francisco, CA","country":"US"}
 	]
 },{
 	"name":"Priceline",
@@ -1306,14 +1306,14 @@ var entries = { data :
 	"name":"Prominic",
 	"url":"https://prominic.net/careers/" ,
 	"locations":[
-		{"loc":"Champaign, IL ","country":"US"},
+		{"loc":"Champaign, IL","country":"US"},
 		{"loc":"Rantoul, IL","country":"US"}
 	]
 },{
 	"name":"Pure Storage",
 	"url":"https://www.purestorage.com/company/careers.html",
 	"locations":[
-		{"loc":"Bellevue, WA ","country":"US"},
+		{"loc":"Bellevue, WA","country":"US"},
 		{"loc":"Mountain View, CA","country":"US"}
 	]
 },{

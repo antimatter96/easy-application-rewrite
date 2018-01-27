@@ -24,7 +24,7 @@ var customFilter = (function(){
 	function fMain(){
 		$("select").multipleSelect({
 			multiple: true,
-			multipleWidth: 100,
+			multipleWidth: 250,
 			width: '100%',
 			styler: function(value) {
 				let z = value.split('-');
