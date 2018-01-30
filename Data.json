@@ -1,4 +1,3 @@
-var entries = { data :
 [{
 	"name":"23andMe",
 	"url":"https://www.23andme.com/careers/",
@@ -2076,7 +2075,4 @@ var entries = { data :
 	"name":"Zynga",
 	"url":"https://www.zynga.com/careers",
 	"locations":[{"locs":"San Francisco, CA","country":"US"}]
-}]};
-
-module.exports = entries;
-
+}]
