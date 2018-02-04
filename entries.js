@@ -28,9 +28,9 @@ var entries = { data :
 	"url":"https://www.acquia.com/careers/open-positions",
 	"locations":[
 		{"loc":"Boston, MA","country":"US"},
-		{"loc":"New Delhi","country":"India"},
+		{"loc":"New Delhi","country":"IN"},
 		{"loc":"Portland, OR","country":"US"},
-		{"loc":"Toronto","country":"Canada"}
+		{"loc":"Toronto, ON","country":"CA"}
 	],
 	"remote":true
 },{
@@ -44,7 +44,7 @@ var entries = { data :
 },{
 	"name":"Ahrefs",
 	"url":"https://ahrefs.com/jobs",
-	"locations":[{"loc":"Singapore","country":"Singapore"}],
+	"locations":[{"loc":"Singapore","country":"SG"}],
 	"remote":true
 },{
 	"name":"Airbnb",
@@ -127,7 +127,7 @@ var entries = { data :
 	"url":"https://atomic.vc/jobs",
 	"locations":[
 		{"loc":"San Francisco, CA","country":"US"},
-		{"loc":"Waterloo","country":"Canada"}
+		{"loc":"Waterloo, ON","country":"CA"}
 	]
 },{
 	"name":"Audience",
@@ -205,7 +205,7 @@ var entries = { data :
 },{
 	"name":"Booking.com",
 	"url":"https://workingatbooking.com/",
-	"locations":[{"loc":"Amsterdam","country": "Netherlands"}]
+	"locations":[{"loc":"Amsterdam","country": "NL"}]
 },{
 	"name":"Box",
 	"url":"https://www.box.com/jobs",
@@ -213,7 +213,7 @@ var entries = { data :
 		{"loc":"London","country": "UK"},
 		{"loc":"New York, NY","country":"US"},
 		{"loc":"Redwood City, CA","country":"US"},
-		{"loc":"San Fransisco, CA","country":"US"}
+		{"loc":"San Francisco, CA","country":"US"}
 	]
 },{
 	"name":"Brigade",
@@ -237,7 +237,7 @@ var entries = { data :
 },{
 	"name":"Busbud",
 	"url":"https://www.busbud.com/en/jobs",
-	"locations":[{"loc":"Montreal, Quebec","country":"Canada"}]
+	"locations":[{"loc":"Montreal, Quebec","country":"CA"}]
 },{
 	"name":"BuzzFeed",
 	"url":"https://www.buzzfeed.com/about/jobs",
@@ -264,7 +264,7 @@ var entries = { data :
 },{
 	"name":"Carousell",
 	"url":"https://boards.greenhouse.io/carousell",
-	"locations":[{"loc":"Singapore","country":"Singapore"}]
+	"locations":[{"loc":"Singapore","country":"SG"}]
 },{
 	"name":"Casetext",
 	"url":"https://casetext.com/jobs",
@@ -342,7 +342,7 @@ var entries = { data :
 },{
 	"name":"Clue",
 	"url":"https://www.helloclue.com/jobs.html",
-	"locations":[{"loc":"Berlin","country": "Germany"}]
+	"locations":[{"loc":"Berlin","country": "DE"}]
 },{
 	"name":"Clustrix",
 	"url":"http://www.clustrix.com/jobs",
@@ -384,7 +384,7 @@ var entries = { data :
 	"name":"CoreOS",
 	"url":"https://coreos.com/jobs",
 	"locations":[
-		{"loc":"Berlin","country": "Germany"},
+		{"loc":"Berlin","country": "DE"},
 		{"loc":"New York, NY","country":"US"},
 		{"loc":"San Francisco, CA","country":"US"}
 	]
@@ -437,7 +437,7 @@ var entries = { data :
 	"url":"https://www.curseinc.com/careers?cookieTest=1",
 	"locations":[
 		{"loc":"Astoria, NY","country":"US"},
-		{"loc":"Berlin", "country":"Germany"}, 
+		{"loc":"Berlin", "country":"DE"}, 
 		{"loc":"El Segundo, CA","country":"US"},
 		{"loc":"Huntsville, AL","country":"US"},
 		{"loc":"Irvine, CA","country":"US"},
@@ -559,14 +559,14 @@ var entries = { data :
 },{
 	"name":"Element.ai",
 	"url":"http://www.elementai.com/en/careers?p=jobs",
-	"locations":[{"loc":"Montreal","country": "Canada"}]
+	"locations":[{"loc":"Montreal, Quebec","country": "CA"}]
 },{
 	"name":"Elemental Technologies",
 	"url":"https://www.elementaltechnologies.com/company/jobs",
 	"locations":[
-		{"loc":"Causeway Bay","country":"Hong Kong"},
+		{"loc":"Causeway Bay","country":"HK"},
 		{"loc":"Portland, OR","country":"US"},
-		{"loc":"Singapore","country":"Singapore"},
+		{"loc":"Singapore","country":"SG"},
 		{"loc":"Theale, Reading","country" :"UK"},
 		{"loc":"Tokyo","country": "Japan"}
 	]
@@ -610,12 +610,12 @@ var entries = { data :
 	"url":"https://www.farfetch.com/jobs",
 	"locations":[
 		{"loc":"Guimaraes", "country":"Portugal"},
-		{"loc":"Hong Kong","country":"Hong Kong"},
+		{"loc":"Hong Kong","country":"HK"},
 		{"loc":"Lisbon","country": "Portugal"},
 		{"loc":"London","country": "UK"},
-		{"loc":"Moscow","country": "Russia"},
+		{"loc":"Moscow","country": "RU"},
 		{"loc":"Porto","country":"Portugal"},
-		{"loc":"Shanghai", "country":"China"}
+		{"loc":"Shanghai", "country":"CN"}
 	]
 },{
 	"name":"Faraday Future",
@@ -640,7 +640,7 @@ var entries = { data :
 	"name":"FiveStars",
 	"url":"http://www.fivestars.com/jobs",
 	"locations":[
-		{"loc":"Denver, Colorado","country":"US"},
+		{"loc":"Denver, CO","country":"US"},
 		{"loc":"San Francisco, CA","country":"US"}
 	]
 },{
@@ -667,7 +667,7 @@ var entries = { data :
 },{
 	"name":"Flipkart",
 	"url":"http://www.flipkartcareers.com/",
-	"locations":[{"loc":"Bangalore", "country":"India"}]
+	"locations":[{"loc":"Bangalore", "country":"IN"}]
 },{
 	"name":"Forex Factory",
 	"url":"https://www.forexfactory.com/jobs",
@@ -766,7 +766,7 @@ var entries = { data :
 },{
 	"name":"Helpling",
 	"url":"https://www.helpling.de/jobs",
-	"locations":[{"loc":"Berlin", "country":"Germany"}]
+	"locations":[{"loc":"Berlin", "country":"DE"}]
 },{
 	"name":"Hipmunk",
 	"url":"https://www.hipmunk.com/jobs",
@@ -856,7 +856,7 @@ var entries = { data :
 	"url":"https://www.instructure.com/jobs",
 	"locations":[
 		{"loc":"Chicago, IL","country":"US"},
-		{"loc":"Hong Kong","country":"Hong Kong"},
+		{"loc":"Hong Kong","country":"HK"},
 		{"loc":"London","country": "UK"},
 		{"loc":"Pleasant Grove, UT","country":"US"},
 		{"loc":"Salt Lake City, UT","country":"US"},
@@ -925,20 +925,20 @@ var entries = { data :
 },{
 	"name":"JustWatch",
 	"url":"https://www.justwatch.com/us/talent",
-	"locations":[{"loc":"Berlin","country": "Germany"}]
+	"locations":[{"loc":"Berlin","country": "DE"}]
 },{
 	"name":"Kayak",
 	"url":"https://www.kayak.com/jobs",
 	"locations":[
 		{"loc":"Austin, TX","country":"US"},
-		{"loc":"Berlin","country" :"Germany"},
+		{"loc":"Berlin","country" :"DE"},
 		{"loc":"Cambridge, MA","country":"US"},
 		{"loc":"Concord, MA","country":"US"},
 		{"loc":"Coral Gables, FL","country":"US"},
 		{"loc":"Dallas, TX","country":"US"},
 		{"loc":"Denver, CO","country":"US"},
 		{"loc":"San Francisco, CA","country":"US"},
-		{"loc":"Zurich", "country" :"Switzerland"}
+		{"loc":"Zurich", "country" :"CH"}
 	]
 },{
 	"name":"KeepSafe",
@@ -956,7 +956,7 @@ var entries = { data :
 },{
 	"name":"Kik",
 	"url":"http://www.kik.com/jobs",
-	"locations":[{"loc":"Waterloo", "country":"Canada"}]
+	"locations":[{"loc":"Waterloo, ON", "country":"CA"}]
 },{
 	"name":"Kinnek",
 	"url":"https://www.kinnek.com/jointeam/",
@@ -964,19 +964,19 @@ var entries = { data :
 },{
 	"name":"Klarna",
 	"url":"https://www.klarna.com/jobs",
-	"locations":[{"loc":"Stockholm", "country":"Sweden"}]
+	"locations":[{"loc":"Stockholm", "country":"SE"}]
 },{
 	"name":"Laserfiche",
 	"url":"http://jobs.laserfiche.com/",
 	"locations":[
 		{"loc":"Fort Lauderdale, FL","country":"US"},
-		{"loc":"Guadalajara","country":"Mexico"},
+		{"loc":"Guadalajara","country":"MX"},
 		{"loc":"Los Angeles, CA","country":"US"},
 		{"loc":"London","country":"UK"},
 		{"loc":"Washington, D.C.","country":"US"},
-		{"loc":"Toronto","country":"Canada"},
-		{"loc":"Shanghai","country":"China"},
-		{"loc":"Hong Kong","country":"Hong Kong"}
+		{"loc":"Toronto, ON","country":"CA"},
+		{"loc":"Shanghai","country":"CN"},
+		{"loc":"Hong Kong","country":"HK"}
   ]
 },{
 	"name":"LendUp",
@@ -1057,7 +1057,7 @@ var entries = { data :
 	"url":"https://www.mark43.com/careers/",
 	"locations":[
 		{"loc":"New York, NY","country":"US"},
-		{"loc":"Toronto","country":"Canada"},
+		{"loc":"Toronto, ON","country":"CA"},
 		{"loc":"Washington, DC","country":"US"}
 	]
 },{
@@ -1087,7 +1087,7 @@ var entries = { data :
 	"name":"Mesosphere",
 	"url":"https://mesosphere.com/careers/",
 	"locations":[
-		{"loc":"Hamburg","country":"Germany"},
+		{"loc":"Hamburg","country":"DE"},
 		{"loc":"San Francisco, CA","country":"US"}
 	]
 },{
@@ -1187,7 +1187,7 @@ var entries = { data :
 },{
 	"name":"Nulogy",
 	"url":"https://nulogy.com/who-we-are/careers/", 
-	"locations":[{"loc":"Toronto, ON","country" :"Canada"}]
+	"locations":[{"loc":"Toronto, ON","country" :"CA"}]
 },{
 	"name":"Nutanix",
 	"url":"https://www.nutanix.com/careers/" ,
@@ -1206,7 +1206,7 @@ var entries = { data :
 },{
 	"name":"Onefootball",
 	"url":"https://www.onefootball.com/company/careers.html", 
-	"locations":[{"loc":"Berlin","country":"Germany"}]
+	"locations":[{"loc":"Berlin","country":"DE"}]
 },{
 	"name":"OneLogin",
 	"url":"https://www.onelogin.com/jobs" ,
@@ -1336,7 +1336,7 @@ var entries = { data :
 	"url":"https://www.qubole.com/company/careers/",
 	"locations":[
 		{"loc":"Mountain View, CA","country":"US"},
-		{"loc":"Bangalore","country": "India"}
+		{"loc":"Bangalore","country": "IN"}
 	]
 },{
 	"name":"Quip",
@@ -1388,8 +1388,8 @@ var entries = { data :
 	"name":"RedMart",
 	"url":"http://about.redmart.com/careers/",
 	"locations":[
-		{"loc":"India","country":"India"},
-		{"loc":"Singapore","country":"Singapore"}
+		{"loc":"IN","country":"IN"},
+		{"loc":"Singapore","country":"SG"}
 	]
 },{
 	"name":"Redis-Labs",
@@ -1406,7 +1406,7 @@ var entries = { data :
 },{
 	"name":"ResearchGate",
 	"url":"https://www.researchgate.net/careers#positions",
-	"locations":[{"loc":"Berlin","country":"Germany"}]
+	"locations":[{"loc":"Berlin","country":"DE"}]
 },{
 	"name":"Resultados Digitais",
 	"url":"https://resultadosdigitais.com.br/trabalhe-conosco/",
@@ -1511,8 +1511,8 @@ var entries = { data :
 	"name":"Shopify",
 	"url":"https://www.shopify.com/careers",
 	"locations":[
-		{"loc":"Ottawa, ON","country":"Canada"},
-		{"loc":"Toronto, ON","country":"Canada"}
+		{"loc":"Ottawa, ON","country":"CA"},
+		{"loc":"Toronto, ON","country":"CA"}
 	],
 	"remote":true
 },{
@@ -1603,7 +1603,7 @@ var entries = { data :
 	"name":"SoundCloud",
 	"url":"https://soundcloud.com/jobs",
 	"locations":[
-		{"loc":"Berlin","country": "Germany"},
+		{"loc":"Berlin","country": "DE"},
 		{"loc":"London","country": "UK"},
 		{"loc":"New York, NY","country":"US"},
 		{"loc":"San Francisco, CA","country":"US"}
@@ -1639,7 +1639,7 @@ var entries = { data :
 },{
 	"name":"SSi Micro",
 	"url":"https://ssimicro.com/job-postings",
-	"locations":[{"loc":"Kanata, ON","country":"Canada"}]
+	"locations":[{"loc":"Ottawa, ON","country":"CA"}]
 },{
 	"name":"StackPath",
 	"url":"https://www.stackpath.com/jobs",
@@ -1724,7 +1724,7 @@ var entries = { data :
 	"name":"TextNow",
 	"url":"http://about.textnow.com/careers/#openings",
 	"locations":[
-		{"loc":"Waterloo, ON","country":"Canada"},
+		{"loc":"Waterloo, ON","country":"CA"},
 		{"loc":"San Francisco, CA","country":"US"}
 	]
 },{
@@ -1797,7 +1797,7 @@ var entries = { data :
 	"url":"https://tophat.com/work-with-us",
 	"locations":[
 		{"loc":"Denver, CO","country":"US"},
-		{"loc":"Toronto, ON","country":"Canada"}
+		{"loc":"Toronto, ON","country":"CA"}
 	]
 },{
 	"name":"Trail",
@@ -1861,7 +1861,7 @@ var entries = { data :
 },{
 	"name":"Two Roads",
 	"url":"http://tworoads.co.in/#jobs",
-	"locations":[{"loc":"Bangalore","country": "India"}]
+	"locations":[{"loc":"Bangalore","country": "IN"}]
 },{
 	"name":"Two Sigma",
 	"url":"https://careers.twosigma.com/",
@@ -1946,7 +1946,7 @@ var entries = { data :
 },{
 	"name":"Wattpad",
 	"url":"https://www.wattpad.com/life/?jobs",
-	"locations":[{"loc":"Toronto, ON", "country":"Canada"}]
+	"locations":[{"loc":"Toronto, ON", "country":"CA"}]
 },{
 	"name":"WayUp",
 	"url":"https://www.wayup.com/joinus/",
@@ -1958,7 +1958,7 @@ var entries = { data :
 },{
 	"name":"Wealthsimple",
 	"url":"https://www.wealthsimple.com/en-ca/work-with-us",
-	"locations":[{"loc":"Toronto, ON", "country":"Canada"}]
+	"locations":[{"loc":"Toronto, ON", "country":"CA"}]
 },{
 	"name":"Weebly",
 	"url":"http://careers.weebly.com/",
@@ -1983,7 +1983,7 @@ var entries = { data :
 	"name":"Wolt",
 	"url":"https://wolt.com/jobs",
 	"locations":[
-		{"loc":"Stockholm", "country":"Sweden"},
+		{"loc":"Stockholm", "country":"SE"},
 		{"loc":"Copenhagen", "country":"Denmark"},
 		{"loc":"Turku", "country":"Finland"},
 		{"loc":"Helsinki", "country":"Finland"}
@@ -2004,7 +2004,7 @@ var entries = { data :
 		{"loc":"Milton Keynes","country":"UK"},
 		{"loc":"New Zealand","country":"UK"},
 		{"loc":"Australia","country":"Australia"},
-		{"loc":"Singapore","country":"Singapore"}
+		{"loc":"Singapore","country":"SG"}
 	]
 },{
 	"name":"Yelp",
@@ -2022,8 +2022,8 @@ var entries = { data :
 	"name":"Zalando",
 	"url":"https://jobs.zalando.com/tech/jobs",
 	"locations":[
-		{"loc":"Berlin","country":"Germany"},
-		{"loc":"Dortmund","country":"Germany"},
+		{"loc":"Berlin","country":"DE"},
+		{"loc":"Dortmund","country":"DE"},
 		{"loc":"London","country":"UK"}
 	]
 },{
@@ -2045,7 +2045,7 @@ var entries = { data :
 },{
 	"name":"ZenMate",
 	"url":"https://zenmate.com/jobs",
-	"locations":[{"loc":"Berlin", "country":"Germany"}]
+	"locations":[{"loc":"Berlin", "country":"DE"}]
 },{
 	"name":"Zillow",
 	"url":"https://www.zillow.com/jobs/",
@@ -2075,7 +2075,7 @@ var entries = { data :
 },{
 	"name":"Zynga",
 	"url":"https://www.zynga.com/careers",
-	"locations":[{"locs":"San Francisco, CA","country":"US"}]
+	"locations":[{"loc":"San Francisco, CA","country":"US"}]
 }]};
 
 module.exports = entries;

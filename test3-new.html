@@ -9,6 +9,7 @@
 		<div>
 			Filter based on location ?
 			<button id="filter-start">Yes</button>
+			<button id="filter-do">Filter</button>
 		</div>
 		<p></p>
 	</div>
@@ -87,7 +88,7 @@
 						
 						tag3.onload = function(){
 							mainLoaded = true;
-							customFilter.init(true, loc_data);
+							customFilter.init(true, loc_data, renderer.display);
 						}
 					}
 				}
@@ -103,4 +104,10 @@
 		window.addEventListener('load', nit("http://localhost:8080"));
 		
     </script>
+	<style>
+	.chosen-container .chosen-results li.group-option {
+		width: 50% !important;
+		display: inline-block !important;
+	}
+	</style>
 </body>

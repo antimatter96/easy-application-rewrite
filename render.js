@@ -1,8 +1,8 @@
  var renderer = (function(){
 	
 	function render(filteredData){
-	
-		var deleteThis = document.getElementById("list");
+		const startTime = performance.now();
+		let deleteThis = document.getElementById("list");
 		if(deleteThis){
 			deleteThis.parentElement.removeChild(deleteThis);
 		}
@@ -10,10 +10,10 @@
 			console.log("First ?")
 		}
 	
-		var list = document.createElement('div');
+		let list = document.createElement('div');
 		list.id = "list";
 
-		for( var i = 0; i < filteredData.length; i++){
+		for( let i = 0; i < filteredData.length; i++){
 			let e = filteredData[i];
 			
 			let listEntry = document.createElement('div');
@@ -78,7 +78,10 @@
 			listEntry.appendChild(listDivContainer);
 			list.appendChild(listEntry);
 		}
-		document.body.appendChild(list);	
+		document.body.appendChild(list);
+		const duration = performance.now() - startTime;
+		console.log("Rendering of", filteredData.length,"took",duration,"ms");
+		
 	}
 	
 	return {

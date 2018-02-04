@@ -2,9 +2,6 @@
 	
 	function fLogger(){
 		let div = document.createElement('div');
-		
-		//let p = document.createElement('p');
-		//p.id = "logger-result" 	
 		let btn = document.createElement('button');
 		btn.addEventListener('click', function(e){
 			let q = $('thisone').value;
@@ -18,37 +15,94 @@
 	
 	var selectedEntries;
 	
+	function searchFilter(){
+		const startTime = performance.now();
+		let selectedEntriesArray = new Array(...selectedEntries);
+		selectedEntriesArray.sort();
+		
+		let selectedEntriesObjectArray
+		let tt = [];
+		
+		for(let i = 0; i < selectedEntriesArray.length; i++){
+			let countryIndex = selectedEntriesArray[i].split('-')[0];
+			let locIndex = selectedEntriesArray[i].split('-')[1];
+			
+			let countryString = countryArrMain[countryIndex]["c"].split("{")[0].trimRight();
+			let locationString = countryArrMain[countryIndex]["l"][locIndex].split(':')[2];
+			locationString = locationString.replace(/"|}/g,'');
+			
+			tt.push({"c":countryString,"l":locationString});
+		}
+		
+		let finalS = [];
+		
+		for(let i = 0; i < locationData.length; i++){
+			let locations = locationData[i].locations;
+		
+			let isWanted = false;	
+			if(!locations){
+				continue;
+			}
+			
+			for(let j = 0; j < locations.length; j++){
+
+				let thisC = locations[j].country;
+				let thisL = locations[j].loc;
+				for(let k = 0; k < tt.length; k++){
+					if(tt[k].c == thisC && tt[k].l == thisL){
+						isWanted = true;
+						break;
+					}
+				}
+				if(isWanted){
+					break;
+				}
+			}
+			
+			if(isWanted){
+				finalS.push(locationData[i]);
+			}
+			
+		}
+		const duration = performance.now() - startTime;
+		console.log(`searchFilter took ${duration}ms`);
+		renderFunction(finalS);
+	}
+	
 	function changeHandler(evt, params){
 		if(evt.type === 'change'){
 			if(params.selected){
-				console.log(params.selected);
+				selectedEntries.add(params.selected);
 			}
 			else if(params.deselected){
-				console.log(params.deselected);
+				selectedEntries.delete(params.deselected);
 			}
 		}
 	}
 	
 	function fMain(entries){
 		fx(entries);
-		console.log("Ads");
 		$('.thisone').chosen({'width':'100%'});
 		$('.thisone').on('change', changeHandler);
-		changeHandler = new Set();
+		$('#filter-do').on('click',searchFilter);
+		selectedEntries = new Set();
 	}
 	
 	var countryMap;
 	var countryArr;
+	var countryArrMain;
 	
 	function fx(entries){
-		console.log(entries);
+		console.log("Start fMain");
+		const startTime = performance.now();
+
 		countryMap = new Map();
-		for(var i = 0; i < entries.length; i++){
+		for(let i = 0; i < entries.length; i++){
 			let locEntry = entries[i].locations;
 			if(!locEntry){
 				continue;
 			}
-			for(var j = 0; j < locEntry.length; j++){
+			for(let j = 0; j < locEntry.length; j++){
 				let country = locEntry[j].country;
 				let loc = locEntry[j].loc;
 				
@@ -77,7 +131,7 @@
 				}
 				else{
 					countryMap.set(country, new Set([x]));
-					//countryMap.get(country).add(loc);
+					
 				}
 			}
 		}
@@ -103,18 +157,14 @@
 				return a[0] > b[0];
 			}
 		});
-		
-		console.log(countryArr);
-		
-		//document.body.removeChild(document.body.firstElementChild);
-		
+				
 		let sel = document.createElement('select');
 		let dummyOption = document.createElement('option');
 		dummyOption.value = "";
 		
 		sel.appendChild(dummyOption);
 		
-		let countryArrMain = [];
+		countryArrMain = [];
 		for( let i = 0; i < countryArr.length; i++){
 			let temp = {};
 			temp["c"] =  countryArr[i][0];
@@ -148,19 +198,19 @@
 		sel.classList.add("thisone");
 		
 		document.getElementById("main").appendChild(sel);
-		//document.body.insertBefore(sel, document.body.firstChild);
-		//document.body.appendChild(sel);
-		console.log("index-built");
+		
+		const duration = performance.now() - startTime;
+		console.log(`fMain took ${duration}ms`);
+		
 	}
 	
+	var locationData;
+	var renderFunction;
 	
 	return {
-		init:function(logging, loc_data){
-			//
-			// PARSE THE DATA
-			// CREATE OPTION
-			//
-			
+		init:function(logging, loc_data, _renderFunction){
+			renderFunction = _renderFunction;
+			locationData = loc_data;
 			fMain(loc_data);
 			if(logging){
 				fLogger();
