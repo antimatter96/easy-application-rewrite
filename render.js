@@ -19,6 +19,7 @@
 			let listEntry = document.createElement('div');
 			
 			let listDivContainer = document.createElement('div');
+			listEntry.classList.add('listentry-container');
 			listDivContainer.classList.add('listEntry');
 			
 			let entryName = document.createElement('span');
@@ -81,6 +82,15 @@
 		document.body.appendChild(list);
 		const duration = performance.now() - startTime;
 		console.log("Rendering of", filteredData.length,"took",duration,"ms");
+		
+		const startTimeM = performance.now();
+		var ms = new Masonry('#list',{
+			horizontalOrder : true,
+			itemSelector: '.listentry-container'
+		}) 
+		
+		const durationM = performance.now() - startTimeM;
+		console.log("Masonry", filteredData.length,"took",durationM,"ms");
 		
 	}
 	
