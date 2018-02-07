@@ -13,7 +13,7 @@ var countryMap;var countryArr;var countryArrMain;function fx(entries){console.lo
 for(let j=0;j<locEntry.length;j++){let country=locEntry[j].c;let loc=locEntry[j].l;if(!loc&&!country){continue;}
 if(!country){country="World";}
 if(!loc){loc="Unknown";}
-loc=loc.toLowerCase();loc=loc.replace(/\s|\,|\'/g,"");let mapEntry=countryMap.get(country);let z={"l":loc,"full":locEntry[j].loc};let x=JSON.stringify(z);if(mapEntry){if(mapEntry.has(x)){continue;}else{mapEntry.add(x);}}
+loc=loc.toLowerCase();loc=loc.replace(/\s|\,|\'/g,"");let mapEntry=countryMap.get(country);let z={"l":loc,"full":locEntry[j].l};let x=JSON.stringify(z);if(mapEntry){if(mapEntry.has(x)){continue;}else{mapEntry.add(x);}}
 else{countryMap.set(country,new Set([x]));}}}
 countryArr=[];let countryIter=countryMap.entries();let country=countryIter.next();while(!country.done){countryArr.push(country.value);country=countryIter.next();}
 countryArr=countryArr.sort(function(a,b){if(a[1].size>b[1].size){return-1;}
