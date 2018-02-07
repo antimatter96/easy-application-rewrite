@@ -2,9 +2,7 @@ var customFilter=(function(){function fLogger(){let div=document.createElement('
 var selectedEntries;function searchFilter(){const startTime=performance.now();let selectedEntriesArray=new Array(...selectedEntries);selectedEntriesArray.sort();let selectedEntriesObjectArray
 let tt=[];for(let i=0;i<selectedEntriesArray.length;i++){let countryIndex=selectedEntriesArray[i].split('-')[0];let locIndex=selectedEntriesArray[i].split('-')[1];let countryString=countryArrMain[countryIndex]["c"].split("{")[0].trimRight();let locationString=countryArrMain[countryIndex]["l"][locIndex].split(':')[2];locationString=locationString.replace(/"|}/g,'');tt.push({"c":countryString,"l":locationString});}
 let finalS=[];for(let i=0;i<locationData.length;i++){let locations=locationData[i].ls;let isWanted=false;if(!locations){continue;}
-for(let j=0;j<locations.length;j++){let thisC=locations[j].c
-let thisL=locations[j].l
-for(let k=0;k<tt.length;k++){if(tt[k].c==thisC&&tt[k].l==thisL){isWanted=true;break;}}
+for(let j=0;j<locations.length;j++){let thisC=locations[j].c;let thisL=locations[j].l;for(let k=0;k<tt.length;k++){if(tt[k].c==thisC&&tt[k].l==thisL){isWanted=true;break;}}
 if(isWanted){break;}}
 if(isWanted){finalS.push(locationData[i]);}}
 const duration=performance.now()-startTime;console.log(`searchFilter took ${duration}ms`);renderFunction(finalS);}
@@ -12,9 +10,7 @@ function changeHandler(evt,params){if(evt.type==='change'){if(params.selected){s
 else if(params.deselected){selectedEntries.delete(params.deselected);}}}
 function fMain(entries){fx(entries);$('.thisone').chosen({'width':'100%'});$('.thisone').on('change',changeHandler);$('#filter-do').on('click',searchFilter);selectedEntries=new Set();}
 var countryMap;var countryArr;var countryArrMain;function fx(entries){console.log("Start fMain");const startTime=performance.now();countryMap=new Map();for(let i=0;i<entries.length;i++){let locEntry=entries[i].ls;if(!locEntry){continue;}
-for(let j=0;j<locEntry.length;j++){let country=locEntry[j].c
-let loc=locEntry[j].l
-if(!loc&&!country){continue;}
+for(let j=0;j<locEntry.length;j++){let country=locEntry[j].c;let loc=locEntry[j].l;if(!loc&&!country){continue;}
 if(!country){country="World";}
 if(!loc){loc="Unknown";}
 loc=loc.toLowerCase();loc=loc.replace(/\s|\,|\'/g,"");let mapEntry=countryMap.get(country);let z={"l":loc,"full":locEntry[j].loc};let x=JSON.stringify(z);if(mapEntry){if(mapEntry.has(x)){continue;}else{mapEntry.add(x);}}

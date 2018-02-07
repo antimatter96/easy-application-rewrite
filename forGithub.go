@@ -36,7 +36,7 @@ func main() {
 
 	replace("./src/data.json", "./data.json", []string{"name", "url", "locations", "loc", "country"}, []string{"n", "u", "ls", "l", "c"})
 	replace("./src/render.js", "./static/render.js", []string{"e.name", "e.url", "e.locations", "e.loc", "e.country", "].loc", "].country"}, []string{"e.n", "e.u", "e.ls", "e.l", "e.c", "].l", "].c"})
-	replace("./src/index-main.js", "./static/index-main.js", []string{".locations;", ".loc;", ".country;"}, []string{".ls;", ".l", ".c"})
+	replace("./src/index-main.js", "./static/index-main.js", []string{"].locations;", "].loc;", "].country;"}, []string{"].ls;", "].l", "].c"})
 
 	// NOTE THAT SOME FILES TO BE MINIFIED ARE IN STATIC
 	minifyOnly("./static/render.js", "./static/render.js", "text/js")
