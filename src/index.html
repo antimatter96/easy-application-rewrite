@@ -1,0 +1,83 @@
+<head>
+	<link href="../src/index-main.css" rel="stylesheet" />
+</head>
+<body>
+	<style>
+		
+	</style>
+	<div id="main">
+		<div>
+			Filter based on location ?
+			<button id="filter-start">Yes</button>
+			<button id="filter-do">Filter</button>
+		</div>
+		<p></p>
+	</div>
+	<script src="./static/mason.js"></script>
+	<script src="../src/render.js"></script>
+    <script>
+		function nit(data_link) {
+			var loc_data;	
+			
+			var r = new XMLHttpRequest();
+			r.open("GET", data_link, true);
+			r.responseType = "json";
+			r.send();
+			
+			r.onreadystatechange = function(){
+				if(r.readyState == 4){
+					//console.log(r);
+					console.log("data got");
+					loc_data = r.response.data;
+					renderer.display(loc_data);
+				}
+			}
+		
+			let filterBtn = document.getElementById("filter-start");
+			filterBtn.addEventListener('click', function(){
+				//
+				let tag = document.createElement("script");
+				tag.src = "./static/jquery.min.js";
+				document.body.appendChild(tag);
+				
+				let jqLoaded = false;
+				let chsnLoaded = false;
+				let mainLoaded = false;
+				
+				tag.onload = function(){
+					jqLoaded = true;
+					let tag2 = document.createElement("script");
+					tag2.src = "./static/chosen.jquery.js";
+					document.body.appendChild(tag2);
+					
+					tag2.onload = function(){
+						chsnLoaded = true;
+						let tag3 = document.createElement("script");
+						tag3.src = "../src/index-main.js";
+						document.body.appendChild(tag3);
+						
+						tag3.onload = function(){
+							mainLoaded = true;
+							customFilter.init(true, loc_data, renderer.display);
+						}
+					}
+				}
+				
+				let chsnCss = document.createElement('link');
+				chsnCss.href = "./static/chosen.min.css";
+				chsnCss.rel = "stylesheet";
+				
+				document.body.appendChild(chsnCss);
+								
+			});
+		}
+		window.addEventListener('load', nit("http://localhost:8080"));
+		
+    </script>
+	<style>
+	.chosen-container .chosen-results li.group-option {
+		width: 50% !important;
+		display: inline-block !important;
+	}
+	</style>
+</body>
