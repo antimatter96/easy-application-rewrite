@@ -2,15 +2,11 @@ var entries = require('./entries.js');
 
 var express = require('express');
 
-
 var app = express();
-app.use('/static', express.static('build'));
 
 app.get('/', function(req, res){
 	req.accepts('application/json');
-	
 	res.set('Access-Control-Allow-Origin', "*");
-	
 	res.send(entries);
 });
 
