@@ -32,11 +32,11 @@ func main() {
 
 	var jsonLink = viper.GetString("jsonLink")
 
-	replace("./src/index.html", "./index.html", []string{"../src/", "http://localhost:8080", "loc_data = r.response.data;"}, []string{"./static/", jsonLink, "loc_data = r.response;"})
+	replace("./src/index.html", "./index.html", []string{"../static/","../src/", "http://localhost:8080", "loc_data = r.response.data;"}, []string{"./static/","./static/", jsonLink, "loc_data = r.response;"})
 
 	replace("./src/data.json", "./data.json", []string{"name", "url", "locations", "loc", "country"}, []string{"n", "u", "ls", "l", "c"})
 	replace("./src/render.js", "./static/render.js", []string{"e.name", "e.url", "e.locations", "e.loc", "e.country", "].loc", "].country"}, []string{"e.n", "e.u", "e.ls", "e.l", "e.c", "].l", "].c"})
-	replace("./src/index-main.js", "./static/index-main.js", []string{"].locations;", "].loc;", "].country;"}, []string{"].ls;", "].l", "].c"})
+	replace("./src/index-main.js", "./static/index-main.js", []string{"].locations", "].loc", "].country"}, []string{"].ls", "].l", "].c"})
 
 	// NOTE THAT SOME FILES TO BE MINIFIED ARE IN STATIC
 	minifyOnly("./static/render.js", "./static/render.js", "text/js")
@@ -62,8 +62,6 @@ func replace(path, newPath string, replaceThis, withThis []string) {
 	if len(replaceThis) != len(withThis) {
 		panic("-_-")
 	}
-
-	//fmt.Println(path)
 
 	oldContent := read
 	var newContents string

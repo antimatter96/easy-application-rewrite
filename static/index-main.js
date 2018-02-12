@@ -8,7 +8,7 @@ if(isWanted){finalS.push(locationData[i]);}}
 const duration=performance.now()-startTime;console.log(`searchFilter took ${duration}ms`);renderFunction(finalS);}
 function changeHandler(evt,params){if(evt.type==='change'){if(params.selected){selectedEntries.add(params.selected);}
 else if(params.deselected){selectedEntries.delete(params.deselected);}}}
-function fMain(entries){fx(entries);$('.thisone').chosen({'width':'100%'});$('.thisone').on('change',changeHandler);$('#filter-do').on('click',searchFilter);selectedEntries=new Set();}
+function fMain(entries){fx(entries);$('.thisone').chosen({'width':'100%'});$('.thisone').on('change',changeHandler);selectedEntries=new Set();$('#filter-do').on('click',searchFilter);document.getElementById('filter-do').hidden=false;document.getElementById("filter-start").hidden=true;}
 var countryMap;var countryArr;var countryArrMain;function fx(entries){console.log("Start fMain");const startTime=performance.now();countryMap=new Map();for(let i=0;i<entries.length;i++){let locEntry=entries[i].ls;if(!locEntry){continue;}
 for(let j=0;j<locEntry.length;j++){let country=locEntry[j].c;let loc=locEntry[j].l;if(!loc&&!country){continue;}
 if(!country){country="World";}

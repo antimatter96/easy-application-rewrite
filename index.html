@@ -8,8 +8,8 @@
 	<div id="main">
 		<div>
 			Filter based on location ?
-			<button id="filter-start">Yes</button>
-			<button id="filter-do">Filter</button>
+			<button id="filter-start" class="act-btn">Yes</button>
+			<button id="filter-do" class="act-btn" hidden>Filter</button>
 		</div>
 		<p></p>
 	</div>
@@ -58,7 +58,7 @@
 						
 						tag3.onload = function(){
 							mainLoaded = true;
-							customFilter.init(true, loc_data, renderer.display);
+							customFilter.init(false, loc_data, renderer.display);
 						}
 					}
 				}
@@ -71,13 +71,7 @@
 								
 			});
 		}
-		window.addEventListener('load', nit("https://raw.githubusercontent.com/antimatter96/easy-application-rewrite/master/data.json"));
+		window.addEventListener('load', nit("https://raw.githubusercontent.com/antimatter96/easy-application-rewrite/data.json"));
 		
     </script>
-	<style>
-	.chosen-container .chosen-results li.group-option {
-		width: 50% !important;
-		display: inline-block !important;
-	}
-	</style>
 </body>

@@ -84,8 +84,10 @@
 		fx(entries);
 		$('.thisone').chosen({'width':'100%'});
 		$('.thisone').on('change', changeHandler);
-		$('#filter-do').on('click',searchFilter);
 		selectedEntries = new Set();
+		$('#filter-do').on('click', searchFilter);
+		document.getElementById('filter-do').hidden = false;
+		document.getElementById("filter-start").hidden = true;
 	}
 	
 	var countryMap;

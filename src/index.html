@@ -8,12 +8,12 @@
 	<div id="main">
 		<div>
 			Filter based on location ?
-			<button id="filter-start">Yes</button>
-			<button id="filter-do">Filter</button>
+			<button id="filter-start" class="act-btn">Yes</button>
+			<button id="filter-do" class="act-btn" hidden>Filter</button>
 		</div>
 		<p></p>
 	</div>
-	<script src="./static/mason.js"></script>
+	<script src="../static/mason.js"></script>
 	<script src="../src/render.js"></script>
     <script>
 		function nit(data_link) {
@@ -37,7 +37,7 @@
 			filterBtn.addEventListener('click', function(){
 				//
 				let tag = document.createElement("script");
-				tag.src = "./static/jquery.min.js";
+				tag.src = "../static/jquery.min.js";
 				document.body.appendChild(tag);
 				
 				let jqLoaded = false;
@@ -47,7 +47,7 @@
 				tag.onload = function(){
 					jqLoaded = true;
 					let tag2 = document.createElement("script");
-					tag2.src = "./static/chosen.jquery.min.js";
+					tag2.src = "../static/chosen.jquery.min.js";
 					document.body.appendChild(tag2);
 					
 					tag2.onload = function(){
@@ -58,13 +58,13 @@
 						
 						tag3.onload = function(){
 							mainLoaded = true;
-							customFilter.init(true, loc_data, renderer.display);
+							customFilter.init(false, loc_data, renderer.display);
 						}
 					}
 				}
 				
 				let chsnCss = document.createElement('link');
-				chsnCss.href = "./static/chosen.min.css";
+				chsnCss.href = "../static/chosen.min.css";
 				chsnCss.rel = "stylesheet";
 				
 				document.body.appendChild(chsnCss);
@@ -74,10 +74,4 @@
 		window.addEventListener('load', nit("http://localhost:8080"));
 		
     </script>
-	<style>
-	.chosen-container .chosen-results li.group-option {
-		width: 50% !important;
-		display: inline-block !important;
-	}
-	</style>
 </body>
