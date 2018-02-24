@@ -1,5 +1,7 @@
  var renderer = (function(){
 	
+	var isMobile = false;
+	
 	function render(filteredData){
 		const startTime = performance.now();
 		let deleteThis = document.getElementById("list");
@@ -83,20 +85,26 @@
 		const duration = performance.now() - startTime;
 		console.log("Rendering of", filteredData.length, "took", duration,"ms");
 		
-		const startTimeM = performance.now();
-		var ms = new Masonry('#list',{
-			horizontalOrder : true,
-			itemSelector: '.listentry-container'
-		}) 
-		
-		const durationM = performance.now() - startTimeM;
-		console.log("Masonry", filteredData.length, "took", durationM,"ms");
-		
+		if(!isMobile){
+			const startTimeM = performance.now();
+			var ms = new Masonry('#list',{
+				horizontalOrder : true,
+				itemSelector: '.listentry-container'
+			}) 
+			
+			const durationM = performance.now() - startTimeM;
+			console.log("Masonry", filteredData.length, "took", durationM,"ms");
+		}
 	}
 	
 	return {
 		display:function(loc_data){
-			render(loc_data);
+			if(navigator.userAgent){
+				if( navigator.userAgent.includes('Mobile') || navigator.userAgent.includes('iPad') || navigator.userAgent.includes('iPhone') ){
+					isMobile = true;
+				}
+			}
+			render(loc_data);	
 		}
 	};
 })();

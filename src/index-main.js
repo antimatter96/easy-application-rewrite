@@ -18,6 +18,22 @@
 	function searchFilter(){
 		const startTime = performance.now();
 		let selectedEntriesArray = new Array(...selectedEntries);
+		
+		if(isMobile){
+			let selectedOptions = document.getElementById("customFilter-select").selectedOptions;
+			
+			for(let i = 0; i < selectedOptions.length; i++){
+				if( selectedOptions[i].value ){
+					selectedEntriesArray.push(selectedOptions[i].value);
+				}
+			}
+			
+		}
+		
+		if(selectedEntriesArray.length < 1){
+			return;
+		}
+		
 		selectedEntriesArray.sort();
 		
 		let selectedEntriesObjectArray
@@ -80,10 +96,24 @@
 		}
 	}
 	
+	function determineMobile(){
+		if(navigator.userAgent){
+			if( navigator.userAgent.includes('Mobile') || navigator.userAgent.includes('iPad') || navigator.userAgent.includes('iPhone') ){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	var isMobile = false;
+	
 	function fMain(entries){
 		fx(entries);
+		isMobile = determineMobile();
 		$('.thisone').chosen({'width':'100%'});
-		$('.thisone').on('change', changeHandler);
+		if(!isMobile){
+			$('.thisone').on('change', changeHandler);
+		}
 		selectedEntries = new Set();
 		$('#filter-do').on('click', searchFilter);
 		document.getElementById('filter-do').hidden = false;
@@ -198,6 +228,7 @@
 		sel.multiple = true;
 		sel.classList.add("chosen-select");
 		sel.classList.add("thisone");
+		sel.id = "customFilter-select";
 		
 		document.getElementById("main").appendChild(sel);
 		

@@ -56,9 +56,7 @@ body{
 
 .entry-link{
 	text-align:center;
-	
-	width:100%;
-	
+	width:100%;	
 	color: #2196f3;
     background-color: #ffffff;
 	text-transform: uppercase;
@@ -146,8 +144,60 @@ body{
     padding: 3px 12px;
     font-size: 12px;
     line-height: 1.846;
-	    font-family: inherit;
+	font-family: inherit;
     font-size: inherit;
     line-height: inherit;
     cursor: pointer;
+}
+
+@media screen and (max-width:813px){
+	body{
+		font-size:24px;
+	}
+	.act-btn{
+		width:100%;
+	}
+	
+	#customFilter-select{
+		width:100%;
+	}
+	
+	.entry-name{
+		font-size:1em;
+		padding:0.125em 0.25em;
+	}
+
+	.entry-link{
+		font-size: 0.75em;
+	}
+
+	.location-container{
+		font-size:0.75em;
+	}
+
+	.location-entry span{
+		padding: 0rem 0.5rem;
+	}
+
+	.remote{
+		font-size:0.75em;
+	}
+	
+	#list > div {
+		margin: 0.5rem auto;
+		width: 95%;
+		border-radius: 0px !important;
+	}
+	
+	#list >div:nth-of-type(odd){
+		background-color:#4caf50;
+	}
+	#list >div:nth-of-type(even){
+		background-color:#3f51b5;
+	}
+	
+	#list{
+		padding:1rem 0.25rem;
+		font-size:24px;
+	}
 }
