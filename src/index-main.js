@@ -1,5 +1,6 @@
   var customFilter = (function(){
 	
+	/*
 	function fLogger(){
 		let div = document.createElement('div');
 		let btn = document.createElement('button');
@@ -12,6 +13,7 @@
 		div.appendChild(btn);
 		document.body.appendChild(div);
 	}
+	*/
 	
 	var selectedEntries;
 	
@@ -109,7 +111,6 @@
 	
 	function fMain(entries){
 		fx(entries);
-		isMobile = determineMobile();
 		$('.thisone').chosen({'width':'100%'});
 		if(!isMobile){
 			$('.thisone').on('change', changeHandler);
@@ -191,11 +192,12 @@
 		});
 				
 		let sel = document.createElement('select');
-		let dummyOption = document.createElement('option');
-		dummyOption.value = "";
 		
-		sel.appendChild(dummyOption);
-		
+		if( !isMobile ){
+			let dummyOption = document.createElement('option');
+			dummyOption.value = "";
+			sel.appendChild(dummyOption);
+		}
 		countryArrMain = [];
 		for( let i = 0; i < countryArr.length; i++){
 			let temp = {};
@@ -244,10 +246,13 @@
 		init:function(logging, loc_data, _renderFunction){
 			renderFunction = _renderFunction;
 			locationData = loc_data;
+			isMobile = determineMobile();
 			fMain(loc_data);
+			/*
 			if(logging){
 				fLogger();
 			}
+			*/
 		}
 	};
 })();
