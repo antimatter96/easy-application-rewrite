@@ -1,0 +1,19 @@
+{
+  "name": "easy-application-rewrite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dev/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antimatter96/easy-application-rewrite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antimatter96/easy-application-rewrite/issues"
+  },
+  "homepage": "https://github.com/antimatter96/easy-application-rewrite#readme"
+}

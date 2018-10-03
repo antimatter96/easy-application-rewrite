@@ -1,62 +1,62 @@
- var renderer = (function(){
+var renderer = (function() {
 	
 	var isMobile = false;
 	
-	function render(filteredData){
+	function render(filteredData) {
 		const startTime = performance.now();
 		let deleteThis = document.getElementById("list");
-		if(deleteThis){
+		if(deleteThis) {
 			deleteThis.parentElement.removeChild(deleteThis);
 		}
-		else{
-			console.log("First ?")
+		else {
+			console.log("First ?");
 		}
 	
-		let list = document.createElement('div');
+		let list = document.createElement("div");
 		list.id = "list";
 
-		for( let i = 0; i < filteredData.length; i++){
+		for( let i = 0; i < filteredData.length; i++) {
 			let e = filteredData[i];
 			
-			let listEntry = document.createElement('div');
+			let listEntry = document.createElement("div");
 			
-			let listDivContainer = document.createElement('div');
-			listEntry.classList.add('listentry-container');
-			listDivContainer.classList.add('listEntry');
+			let listDivContainer = document.createElement("div");
+			listEntry.classList.add("listentry-container");
+			listDivContainer.classList.add("listEntry");
 			
-			let entryName = document.createElement('span');
+			let entryName = document.createElement("span");
 			entryName.innerText = e.name;
-			entryName.classList.add('entry-name');
+			entryName.classList.add("entry-name");
 			
 			listDivContainer.appendChild(entryName);
 			
-			let entryLink = document.createElement('a');
+			let entryLink = document.createElement("a");
 			entryLink.href = e.url;
-			let entryLinkMain = document.createElement('span');
+			let entryLinkMain = document.createElement("span");
 			entryLinkMain.innerText = "Here";
-			entryLink.classList.add('entry-link');
+			entryLink.classList.add("entry-link");
 			
 			entryLink.appendChild(entryLinkMain);
 
 			
 			
-			if( e.locations ){
+			if( e.locations ) {
 			
-				let locationDiv = document.createElement('div');
-				locationDiv.classList.add('location-container');
+				let locationDiv = document.createElement("div");
+				locationDiv.classList.add("location-container");
 			
-				for(let x = 0; x < e.locations.length; x++){
-					let location = document.createElement('span');
-					location.classList.add('location-entry');
+				for(let x = 0; x < e.locations.length; x++) {
+					let location = document.createElement("span");
+					location.classList.add("location-entry");
 					
-					let locationName = document.createElement('span');
-					let locationCountry = document.createElement('span');
+					let locationName = document.createElement("span");
+					let locationCountry = document.createElement("span");
 					
 					locationName.innerText = e.locations[x].loc;
 					locationCountry.innerText = e.locations[x].country;
 					
-					locationName.classList.add('location-name');
-					locationCountry.classList.add('location-country');
+					locationName.classList.add("location-name");
+					locationCountry.classList.add("location-country");
 					
 					location.appendChild(locationName);
 					location.appendChild(locationCountry);
@@ -68,10 +68,10 @@
 				listDivContainer.appendChild(locationDiv);
 			}
 			
-			if(e.remote){
-				let remote = document.createElement('div');
+			if(e.remote) {
+				let remote = document.createElement("div");
 				remote.innerText = "Remote : Yes";
-				remote.classList.add('remote');
+				remote.classList.add("remote");
 				listDivContainer.appendChild(remote);
 
 			}
@@ -83,24 +83,24 @@
 		}
 		document.body.appendChild(list);
 		const duration = performance.now() - startTime;
-		console.log("Rendering of", filteredData.length, "took", duration,"ms");
+		console.log("Rendering of", filteredData.length, "took", duration, "ms");
 		
-		if(!isMobile){
+		if(!isMobile) {
 			const startTimeM = performance.now();
-			var ms = new Masonry('#list',{
+			var ms = new Masonry("#list", {
 				horizontalOrder : true,
-				itemSelector: '.listentry-container'
-			}) 
+				itemSelector: ".listentry-container"
+			});
 			
 			const durationM = performance.now() - startTimeM;
-			console.log("Masonry", filteredData.length, "took", durationM,"ms");
+			console.log("Masonry", filteredData.length, "took", durationM, "ms");
 		}
 	}
 	
 	return {
-		display:function(loc_data){
-			if(navigator.userAgent){
-				if( navigator.userAgent.includes('Mobile') || navigator.userAgent.includes('iPad') || navigator.userAgent.includes('iPhone') ){
+		display:function(loc_data) {
+			if(navigator.userAgent) {
+				if( navigator.userAgent.includes("Mobile") || navigator.userAgent.includes("iPad") || navigator.userAgent.includes("iPhone") ) {
 					isMobile = true;
 				}
 			}

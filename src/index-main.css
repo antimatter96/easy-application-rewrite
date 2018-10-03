@@ -2,21 +2,26 @@ body{
 	width:100%;
 	max-width:1280px;
 	margin:auto;
-	background: #FF512F;
-	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
-	background: linear-gradient(to right, #F09819, #FF512F);
+	background: #f6f9fc;
+	font-family:Roboto, Open Sans, Segoe UI, sans-serif;
 }
 
 #main{
 	padding:10px 10px;
 	margin:auto;
-	font-family:"consolas",'sans-serif';
+}
+
+#main > div:first-child {
+	text-align:center;
+    padding:0.5em 1.5em;
+	background-color: #fff;
+	box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+	border-radius: 4px;
 }
 
 #list{
 	padding:1rem 1em;
 	margin:auto;
-	font-family:'sans-serif';
 	display:flex;
 	flex-wrap:wrap;
 }
@@ -25,39 +30,38 @@ body{
 	margin:0.5rem 0.5rem;
 	width:18%;
 	min-width:200px;
-	box-shadow:0px 0px 1px 1px rgba(0,0,0,0.125);
-	border-radius:0px !important;
-}
-
-#list >div{
-	background-color:#4caf50;
-}
-#list >div:nth-of-type(8n+1),
-#list >div:nth-of-type(8n+3),
-#list >div:nth-of-type(8n+6),
-#list >div:nth-of-type(8n+8){
-	background-color:#3f51b5;
+	border-radius:4px;
 }
 
 .listEntry{
 	display:flex;
 	flex-direction:column;
+	border-radius: 4px;
+	box-shadow:0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+	background-color:#4caf50;
+}
+
+#list >div:nth-of-type(8n+1) > .listEntry,
+#list >div:nth-of-type(8n+3) > .listEntry,
+#list >div:nth-of-type(8n+6) > .listEntry,
+#list >div:nth-of-type(8n+8) > .listEntry{
+	background-color:#3f51b5;
 }
 
 .entry-name{
-	font-family:"Fira Sans";
 	font-size:1.25rem;
 	padding:0.125rem 0.25rem;
 	text-align:center;
 	border-bottom:1px solid rgba(0,0,0,0.5);
 	/*margin-bottom:0.125rem;*/
 	background:#fff;
+	border-radius: 4px 4px 0px 0px;
 }
 
 .entry-link{
 	text-align:center;
 	width:100%;	
-	color: #2196f3;
+	color: #7795f8;
     background-color: #ffffff;
 	text-transform: uppercase;
     -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.125);
@@ -69,6 +73,9 @@ body{
     padding: 3px 0px;
     font-size: 12px;
 	font-family: inherit;
+	border-radius:0px 0px 4px 4px;
+	text-decoration: none;
+	
 }
 
 .location-container{
@@ -117,7 +124,7 @@ body{
     border-radius: 0px !important;
     background-color: #fff !important;
     background-image: -webkit-gradient(linear,left top,left bottom,color-stop(20%,#fff),color-stop(50%,#fdfdfd),color-stop(52%,#fdfdfd),to(#ffffff)) !important;
-    background-image: linear-gradient(#fff 20%,#fdfdfd@ 50%,#fdfdfd 52%,#fff 100%) !important;
+    background-image: linear-gradient(#fff 20%,#fdfdfd 50%,#fdfdfd 52%,#fff 100%) !important;
     background-size: 100% 19px;
     background-repeat: repeat-x;
     background-clip: padding-box;
@@ -131,23 +138,24 @@ body{
 .act-btn{
 	text-transform: uppercase;
     border: none;
-    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	color: #ffffff;
-    background-color: #2196f3;
-    margin-top: 0.5rem;
-	margin-bottom:0.25rem
     text-align: center;
-
     border: 1px solid transparent;
     white-space: nowrap;
-    padding: 3px 12px;
-    font-size: 12px;
-    line-height: 1.846;
-	font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    cursor: pointer;
+	font-family: inherit;   
+	cursor: pointer;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 14px;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.025em;
+	text-decoration: none;
+	
+	color: #fff;
+	background-color: #7795f8;
 }
 
 @media screen and (max-width:813px){
@@ -186,13 +194,12 @@ body{
 	#list > div {
 		margin: 0.5rem auto;
 		width: 95%;
-		border-radius: 0px !important;
 	}
 	
-	#list >div:nth-of-type(odd){
+	#list >div:nth-of-type(odd) >.listEntry{
 		background-color:#4caf50;
 	}
-	#list >div:nth-of-type(even){
+	#list >div:nth-of-type(even).listEntry{
 		background-color:#3f51b5;
 	}
 	
