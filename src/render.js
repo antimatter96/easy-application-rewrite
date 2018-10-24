@@ -35,9 +35,10 @@ var renderer = (function() {
 			let entryLinkMain = document.createElement("span");
 			entryLinkMain.innerText = "Here";
 			entryLink.classList.add("entry-link");
+			entryLink.onclick = () => {trackOutboundLink(e.url); return false;};
 
-			entryLink.id = "link-to-" + e.name.replace(" ", "-").toLowerCase();
-			entryLink.onclick = "trackOutboundLink('" + e.url + "'); return false;";
+			entryLinkMain.id = "link-to-" + e.name.replace(" ", "-").toLowerCase();
+			entryLinkMain.onclick = () => {trackOutboundLink(e.url); return false;};
 
 			entryLink.appendChild(entryLinkMain);
 
