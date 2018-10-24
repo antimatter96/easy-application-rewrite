@@ -79,16 +79,21 @@
 		}
 		window.addEventListener('load', nit("https://raw.githubusercontent.com/antimatter96/easy-application-rewrite/master/data.json"));
 	</script>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116655667-1"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', 'UA-116655667-1');
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-116655667-1', 'auto');
+		ga('send', 'pageview');
 	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<script>
+		var trackOutboundLink = function(url) {
+			ga('send', 'event', 'outbound', 'click', url, {
+				'transport': 'beacon',
+				'hitCallback': function(){document.location = url;}
+			});
+		}
+	</script>
+
 </body>
 
 </html>
