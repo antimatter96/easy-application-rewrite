@@ -36,6 +36,9 @@ var renderer = (function() {
 			entryLinkMain.innerText = "Here";
 			entryLink.classList.add("entry-link");
 
+			entryLink.id = "link-to-" + e.name.replace(" ", "-").toLowerCase();
+			entryLink.onclick = "trackOutboundLink('" + e.url + "'); return false;";
+
 			entryLink.appendChild(entryLinkMain);
 
 
