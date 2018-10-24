@@ -129,10 +129,6 @@
 		{"loc":"Waterloo, ON","country":"CA"}
 	]
 },{
-	"name":"Audience",
-	"url":"http://www.audience.com/eng/Our-company/jobs",
-	"locations":[{"loc":"Mountain View, CA","country":"US"}]
-},{
 	"name":"August",
 	"url":"http://august.com/jobs/#.Vo1p-JMrKHo",
 	"locations":[{"loc":"San Francisco, CA","country":"US"}]
@@ -332,8 +328,12 @@
 	"url":"https://clever.com/about/jobs",
 	"locations":[{"loc":"San Francisco, CA","country":"US"}]
 },{
+	"name": "Clippings",
+	"url": "https://github.com/clippings/join-us#readme",
+	"locations":[{"loc":"Sofia","country":"BG"}]
+},{
 	"name":"Cloudera",
-	"url":"http://jobs.jobvite.com/cloudera/",
+	"url":"https://www.cloudera.com/careers.html",
 	"locations":[
 		{"loc":"Palo Alto, CA","country":"US"},
 		{"loc":"San Francisco, CA","country":"US"}
@@ -668,6 +668,10 @@
 	"url":"http://www.flipkartcareers.com/",
 	"locations":[{"loc":"Bangalore", "country":"IN"}]
 },{
+	"name":"Flipp",
+	"url":"https://corp.flipp.com/careers",
+	"locations":[{"loc":"Toronto, ON","country":"CA"}]
+},{
 	"name":"Forex Factory",
 	"url":"https://www.forexfactory.com/jobs",
 	"locations":[{"loc":"Tampa, FL","country":"US"}]
@@ -687,6 +691,14 @@
 	"name":"General Assembly",
 	"url":"https://generalassemb.ly/jobs",
 	"locations":[{"loc":"New York, NY","country":"US"}]
+},{
+	"name":"GetYourGuide",
+	"url":"https://careers.getyourguide.com",
+	"locations":[
+		{"loc":"Berlin","country":"DE"},
+		{"loc":"Zurich","country":"CH"}
+	]
+
 },{
 	"name":"Gigster",
 	"url":"https://gigster.com/join-us",
@@ -770,11 +782,6 @@
 	"name":"Hipmunk",
 	"url":"https://www.hipmunk.com/jobs",
 	"locations":[{"loc":"San Francisco, CA","country":"US"}]
-},{
-	"name":"Hippoverse",
-	"url":"https://www.hippoverse.com/join_our_team",
-	"locations":[{"loc":"San Diego, CA","country":"US"}],
-	"remote":true
 },{
 	"name":"HomeAway",
 	"url":"https://www.homeaway.com/careers/openings/",
@@ -914,6 +921,10 @@
 	"url":"https://www.jetbrains.com/company/jobs",
 	"locations":[{"loc":"Cambridge, MA","country":"US"}]
 },{
+	"name":"Jiminny",
+	"url":"https://www.jiminny.com/careers.html",
+	"locations":[{"loc":"Sofia","country":"BG"}]
+},{
 	"name":"Jive",
 	"url":"https://www.jivesoftware.com/about-jive/jobs",
 	"locations":[{"loc":"Portland, OR","country":"US"}]
@@ -964,6 +975,10 @@
 	"name":"Klarna",
 	"url":"https://www.klarna.com/jobs",
 	"locations":[{"loc":"Stockholm", "country":"SE"}]
+},{
+	"name":"Knowles",
+	"url":"http://www.knowles.com/eng/Our-company/Careers",
+	"locations":[{"loc":"Mountain View, CA","country":"US"}]
 },{
 	"name":"Laserfiche",
 	"url":"http://jobs.laserfiche.com/",
@@ -1113,6 +1128,10 @@
 	"url":"https://mixbit.com/jobs" ,
 	"locations":[{"loc":"San Mateo, CA","country":"US"}]
 },{
+	"name":"Mixmax",
+	"url":"https://mixmax.com/careers",
+	"locations":[{"loc":"San Francisco, CA","country":"US"}]
+},{
 	"name":"Mixpanel",
 	"url":"https://mixpanel.com/jobs/" ,
 	"locations":[{"loc":"San Francisco, CA","country":"US"}]
@@ -1257,6 +1276,14 @@
 	"name":"Paypal",
 	"url":"https://www.paypal.com/webapps/mpp/jobs",
 	"locations":[{"loc":"San Jose, CA","country":"US"}]
+},{
+	"name":"Paytm Labs",
+	"url":"https://jobs.lever.co/paytm",
+	"locations":[
+		{"loc":"Bangalore","country":"IN"},
+		{"loc":"Noida","country":"IN"},
+		{"loc":"Toronto, ON","country":"CA"}
+	]
 },{
 	"name":"Pinterest",
 	"url":"https://careers.pinterest.com/",
@@ -1484,10 +1511,7 @@
 },{
 	"name":"SendGrid",
 	"url":"https://sendgrid.com/careers/",
-	"locations":[
-		{"loc":"Boulder, CO","country":"US"},
-		{"loc":"Denver, CO","country":"US"}
-	]
+	"locations":[{"loc":"Denver, CO","country":"US"}]
 },{
 	"name":"Sensus",
 	"url":"https://sensus.com/careers/",
@@ -1524,7 +1548,7 @@
 	]
 },{
 	"name":"Shutterfly",
-	"url":"https://www.shutterflyinc.com/careers.html",
+	"url":"https://www.shutterflyinc.com/jobs",
 	"locations":[
 		{"loc":"Greenville, SC","country":"US"},
 		{"loc":"Redwood City, CA","country":"US"},
@@ -1749,7 +1773,8 @@
 	"remote":true
 },{
 	"name":"The League",
-	"url":"http://www.theleague.com/jobs/" 
+	"url":"http://www.theleague.com/jobs/",
+	"locations":[{"loc":"San Francisco, CA","country":"US"}]
 },{
 	"name":"ThoughtSpot",
 	"url":"http://www.thoughtspot.com/jobs",
@@ -1895,6 +1920,14 @@
 	"name":"Valve",
 	"url":"http://www.valvesoftware.com/jobs/job_postings.html",
 	"locations":[{"loc":"Bellevue, WA","country":"US"}]
+},{
+	"name":"Veeva",
+	"url":"https://jobs.jobvite.com/veeva/jobs",
+	"locations":[
+		{"loc":"New York, NY","country":"US"},
+		{"loc":"Pleasant, CA","country":"US"},
+		{"loc":"Toronto, ON","country":"CA"}
+	]
 },{
 	"name":"Venmo",
 	"url":"https://venmo.com/jobs",
