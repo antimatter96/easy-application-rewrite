@@ -69,7 +69,7 @@ var renderer = (function() {
 
 			if(e.remote) {
 				let remote = document.createElement("div");
-				remote.innerText = "Remote : Yes";
+				remote.innerText = "Remote";
 				remote.classList.add("remote");
 				listDivContainer.appendChild(remote);
 
